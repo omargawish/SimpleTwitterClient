@@ -63,8 +63,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
+    /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
+    struct loginViewController {
+      /// Segue identifier `UserFollowersSegue`.
+      static let userFollowersSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "UserFollowersSegue")
+      
+      /// Optionally returns a typed version of segue `UserFollowersSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func userFollowersSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LoginViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.loginViewController.userFollowersSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -122,7 +137,7 @@ struct _R {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = ViewController
+      typealias InitialController = LoginViewController
       
       let bundle = R.hostingBundle
       let name = "Main"

@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import TwitterKit
+import ReactiveKit
+import Bond
 
 class LoginViewController: UIViewController {
-
+    
+    var viewModel:LoginViewModel!
+    let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var loginButton: TWTRLogInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // initialize the view model
+        self.viewModel = LoginViewModel(loginSignal: self.loginButton.reactive.tap)
+        
+        // observe the login success signal
+        self.viewModel.success.observeNext { success in
+            if let success = success {
+                if success {
+                    
+                } else {
+                    
+                }
+            }
+        }.dispose(in: self.disposeBag)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +53,7 @@ class LoginViewController: UIViewController {
     }
     */
 
+    deinit {
+        self.disposeBag.dispose()
+    }
 }
