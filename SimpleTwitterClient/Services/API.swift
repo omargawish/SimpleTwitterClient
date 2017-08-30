@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import TwitterKit
 
 
 public typealias callback = (APIResponse) -> Void
@@ -34,45 +35,24 @@ class API {
     public static let shared = API()
     private init() {}
     
-    public func requestJSON(url:URLRequestConvertible, completionHandler:@escaping callback) {
-        _ = Alamofire.request(url).responseJSON { (response) in
-            switch response.result {
-            case .success(let value) :
-                if let value = value as? [String:Any] {
-                    if self.handleStatusCodes(statusCode: response.response?.statusCode) {
-                        completionHandler(APIResponse.sucess(object: value))
-                    } else if !self.isAuthorized(statusCode: response.response?.statusCode){
-                        // self.kickout()
-                    } else {
-                        if let response = response.response {
-                            let message = value[Constants.API.message]
-                            if let message = message as? String {
-                                let error = APIError(errorCode: response.statusCode, errorMessage: message)
-                                completionHandler(APIResponse.error(error: error))
-                            }
-                            let error = APIError(errorCode: response.statusCode, errorMessage: nil)
-                            completionHandler(APIResponse.error(error: error))
-                        } else {
-                            // Unknown error
-                            let error = APIError(errorCode: -1, errorMessage: nil)
-                            completionHandler(APIResponse.error(error: error))
-                        }
-                        
-                    }
-                } else if let value = value as? Array<Any> {
-                    completionHandler(.sucess(object: value))
-                } else {
-                    completionHandler(APIResponse.sucess(object: Constants.API.response.success))
-                }
-                break
-                
-            case .failure(let error) :
-                var errorCode = -1
-                if let statusCode = response.response?.statusCode {
-                    errorCode = statusCode
-                }
-                completionHandler(APIResponse.error(error: APIError(errorCode:errorCode , errorMessage: error.localizedDescription)))
-                break
+    public func requestJSON(request:URLRequest, completionHandler:@escaping callback) {
+        let client = TWTRAPIClient()
+//        let statusesShowEndpoint = "https://api.twitter.com/1.1/statuses/show.json"
+//        let params = ["id": "20"]
+//        var clientError : NSError?
+        
+//        let request = client.urlRequest(withMethod: "GET", url: statusesShowEndpoint, parameters: params, error: &clientError)
+        
+        client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
+            if connectionError != nil {
+                print("Error: \(String(describing: connectionError))")
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print("json: \(json)")
+            } catch let jsonError as NSError {
+                print("json error: \(jsonError.localizedDescription)")
             }
         }
     }

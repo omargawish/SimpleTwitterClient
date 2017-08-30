@@ -32,9 +32,8 @@ class LoginViewModel {
                 self.success.next(false)
             }
         })
-        
-    
     }
+    
     
     deinit {
         self.disposeBag.dispose()

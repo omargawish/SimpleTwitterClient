@@ -9,8 +9,10 @@
 import Foundation
 
 class Constants {
-    // MARK:- API
     
+    static let twitterAPIBaseURL = "https://api.twitter.com/1.1/"
+    
+    // MARK:- API
     struct API {
         static let message = "message"
         struct response {
@@ -22,6 +24,12 @@ class Constants {
             static let phoneNumber = "phone_number"
             static let code = "code"
         }
+    }
+    
+    // MARK:- TwitterRouter
+    struct TwitterRouter {
+        static let listFollowers = "followers/list.json"
+        static let listTweets = "statuses/user_timeline"
     }
 
 }

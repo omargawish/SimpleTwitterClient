@@ -116,10 +116,67 @@
                     <navigationItem key="navigationItem" title="User Followers" id="B0d-Ll-99g">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="MHE-yp-6yy"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="iig-5h-yHB" kind="show" id="eNj-cd-Khk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBO-al-OeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.8" y="103.89805097451276"/>
+        </scene>
+        <!--Follower-->
+        <scene sceneID="4RU-e6-ZRS">
+            <objects>
+                <viewController title="Follower" id="iig-5h-yHB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DmL-ya-DZa"/>
+                        <viewControllerLayoutGuide type="bottom" id="41F-23-bY1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bla-I8-4D6">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3If-Uz-FxM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="bwY-c3-XzZ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bwY-c3-XzZ" id="6aC-pd-YJx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDP-ay-mbJ">
+                                                    <rect key="frame" x="24" y="16" width="327" height="57.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jDP-ay-mbJ" firstAttribute="leading" secondItem="6aC-pd-YJx" secondAttribute="leadingMargin" constant="16" id="HN2-T0-Moq"/>
+                                                <constraint firstItem="jDP-ay-mbJ" firstAttribute="top" secondItem="6aC-pd-YJx" secondAttribute="topMargin" constant="8" id="IM1-MF-anB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jDP-ay-mbJ" secondAttribute="trailing" constant="16" id="ZeI-x7-2Hb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jDP-ay-mbJ" secondAttribute="bottom" constant="8" id="fKD-FJ-HeC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="41F-23-bY1" firstAttribute="top" secondItem="3If-Uz-FxM" secondAttribute="bottom" id="36e-oA-BIU"/>
+                            <constraint firstAttribute="trailing" secondItem="3If-Uz-FxM" secondAttribute="trailing" id="g99-iI-bUE"/>
+                            <constraint firstItem="3If-Uz-FxM" firstAttribute="leading" secondItem="Bla-I8-4D6" secondAttribute="leading" id="jNk-SM-gN1"/>
+                            <constraint firstItem="3If-Uz-FxM" firstAttribute="top" secondItem="DmL-ya-DZa" secondAttribute="bottom" id="k26-kB-Toa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39o-2U-1Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309.5999999999999" y="103.89805097451276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rpq-Sz-VQd">
@@ -129,7 +186,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="bX6-gN-57j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.97067139148712156" green="0.97067139148712156" blue="0.97067139148712156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
