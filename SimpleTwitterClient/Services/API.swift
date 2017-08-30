@@ -46,13 +46,16 @@ class API {
         client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
             if connectionError != nil {
                 print("Error: \(String(describing: connectionError))")
+                completionHandler(.error(error: APIError(errorCode: -2, errorMessage: R.string.localization.noInternetConnection())))
             }
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 print("json: \(json)")
+                completionHandler(.sucess(object: json))
             } catch let jsonError as NSError {
                 print("json error: \(jsonError.localizedDescription)")
+                completionHandler(.error(error: APIError(errorCode: jsonError.code, errorMessage: jsonError.localizedDescription)))
             }
         }
     }

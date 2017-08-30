@@ -40,21 +40,43 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `Default-568h`.
     static let default568h = Rswift.ImageResource(bundle: R.hostingBundle, name: "Default-568h")
+    /// Image `HeaderPlaceholder`.
+    static let headerPlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "HeaderPlaceholder")
+    /// Image `ProfilePricturePlaceholder`.
+    static let profilePricturePlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "ProfilePricturePlaceholder")
     
     /// `UIImage(named: "Default-568h", bundle: ..., traitCollection: ...)`
     static func default568h(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.default568h, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "HeaderPlaceholder", bundle: ..., traitCollection: ...)`
+    static func headerPlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.headerPlaceholder, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ProfilePricturePlaceholder", bundle: ..., traitCollection: ...)`
+    static func profilePricturePlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.profilePricturePlaceholder, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
+    /// Nib `FollowerHeader`.
+    static let followerHeader = _R.nib._FollowerHeader()
+    
+    /// `UINib(name: "FollowerHeader", in: bundle)`
+    static func followerHeader(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.followerHeader)
+    }
+    
     fileprivate init() {}
   }
   
@@ -103,14 +125,48 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
+    /// This `R.string.localization` struct is generated, and contains static references to 4 localization keys.
+    struct localization {
+      /// Value: No Internet Connection
+      static let noInternetConnection = Rswift.StringResource(key: "No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Okay
+      static let okay = Rswift.StringResource(key: "Okay", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Simple Twitter Client
+      static let simpleTwitterClient = Rswift.StringResource(key: "Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Something went wrong
+      static let somethingWentWrong = Rswift.StringResource(key: "Something went wrong", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: No Internet Connection
+      static func noInternetConnection(_: Void = ()) -> String {
+        return NSLocalizedString("No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Okay
+      static func okay(_: Void = ()) -> String {
+        return NSLocalizedString("Okay", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Simple Twitter Client
+      static func simpleTwitterClient(_: Void = ()) -> String {
+        return NSLocalizedString("Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Something went wrong
+      static func somethingWentWrong(_: Void = ()) -> String {
+        return NSLocalizedString("Something went wrong", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -121,8 +177,31 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
-  struct nib {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try nib.validate()
+  }
+  
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _FollowerHeader.validate()
+    }
+    
+    struct _FollowerHeader: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "FollowerHeader"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "HeaderPlaceholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'HeaderPlaceholder' is used in nib 'FollowerHeader', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

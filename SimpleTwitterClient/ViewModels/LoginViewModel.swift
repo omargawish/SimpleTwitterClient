@@ -15,6 +15,7 @@ class LoginViewModel {
     
     let disposeBag = DisposeBag()
     let success = Property<Bool?>(nil)
+    let AlreadyLoggedIn = Property<Bool?>(nil)
     
     init(loginSignal:Signal1<Void>) {
         loginSignal.observeNext { [unowned self] in
@@ -22,6 +23,10 @@ class LoginViewModel {
             self.loginWithTwitter()
             
         }.dispose(in: self.disposeBag)
+        
+        if Twitter.sharedInstance().sessionStore.hasLoggedInUsers() {
+            self.AlreadyLoggedIn.next(true)
+        }
     }
     
     func loginWithTwitter() {

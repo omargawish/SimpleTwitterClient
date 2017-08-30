@@ -28,13 +28,25 @@ class LoginViewController: UIViewController {
         self.viewModel.success.observeNext { success in
             if let success = success {
                 if success {
-                    
+                    self.performSegue(withIdentifier: R.segue.loginViewController.userFollowersSegue.identifier, sender: self)
                 } else {
                     
                 }
             }
         }.dispose(in: self.disposeBag)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // transit to next followers view controller if user already logged in
+        self.viewModel.AlreadyLoggedIn.observeNext { loggedIn in
+            if let loggedIn = loggedIn {
+                if loggedIn {
+                    self.performSegue(withIdentifier: R.segue.loginViewController.userFollowersSegue.identifier, sender: self)
+                }
+            }
+            }.dispose(in: self.disposeBag)
+
     }
 
     override func didReceiveMemoryWarning() {

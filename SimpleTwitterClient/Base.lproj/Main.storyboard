@@ -23,14 +23,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3r-gm-c2g" customClass="TWTRLogInButton">
-                                <rect key="frame" x="173" y="621" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3r-gm-c2g">
+                                <rect key="frame" x="32" y="611" width="311" height="40"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.56078431370000004" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K0k-sk-afX"/>
+                                </constraints>
+                                <state key="normal" title="Login to Twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="V3r-gm-c2g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VhI-ZG-GFk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V3r-gm-c2g" secondAttribute="trailing" constant="16" id="Vwt-ja-K5G"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V3r-gm-c2g" secondAttribute="bottom" constant="16" id="uhy-My-ZfM"/>
+                            <constraint firstItem="V3r-gm-c2g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="wtz-W2-pen"/>
                         </constraints>
                     </view>
                     <connections>
@@ -40,11 +55,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="96.7016491754123"/>
         </scene>
         <!--User Followers-->
         <scene sceneID="f1V-jR-7WC">
             <objects>
-                <viewController id="vjd-er-uXJ" sceneMemberID="viewController">
+                <viewController id="vjd-er-uXJ" customClass="FollowersViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cG5-ch-EzL"/>
                         <viewControllerLayoutGuide type="bottom" id="jl3-Jk-V3a"/>

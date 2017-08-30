@@ -14,6 +14,12 @@
 		669042541F55D15300751113 /* FollowerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042531F55D15300751113 /* FollowerHeader.swift */; };
 		669042561F55D17600751113 /* FollowerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669042551F55D17600751113 /* FollowerHeader.xib */; };
 		669042591F561F9200751113 /* TwitterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042581F561F9200751113 /* TwitterRouter.swift */; };
+		6690427E1F56486300751113 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669042771F56484500751113 /* SwifteriOS.framework */; };
+		669042811F56C97400751113 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042801F56C97400751113 /* UIAlertControllerExtension.swift */; };
+		669042831F56CA1300751113 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 669042821F56CA1300751113 /* Localization.strings */; };
+		669042861F56CB2A00751113 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042851F56CB2A00751113 /* FollowersViewController.swift */; };
+		669042881F56D3F000751113 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669042871F56D3F000751113 /* SafariServices.framework */; };
+		6690428A1F56E2EC00751113 /* FollowersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042891F56E2EC00751113 /* FollowersPage.swift */; };
 		66C01B671F54CC4700DB2AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C01B661F54CC4700DB2AF4 /* AppDelegate.swift */; };
 		66C01B6C1F54CC4700DB2AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C01B6A1F54CC4700DB2AF4 /* Main.storyboard */; };
 		66C01B6E1F54CC4700DB2AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C01B6D1F54CC4700DB2AF4 /* Assets.xcassets */; };
@@ -29,6 +35,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		669042741F56484500751113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6690426C1F56484500751113 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
+		};
+		669042761F56484500751113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6690426C1F56484500751113 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		669042781F56484500751113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6690426C1F56484500751113 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		6690427A1F56484500751113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6690426C1F56484500751113 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
+		};
+		6690427C1F56484500751113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6690426C1F56484500751113 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6B4D5751C7BAC4500E06514;
+			remoteInfo = SwifterTests;
+		};
 		66C01B781F54CC4700DB2AF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66C01B5B1F54CC4700DB2AF4 /* Project object */;
@@ -57,6 +98,12 @@
 		669042531F55D15300751113 /* FollowerHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowerHeader.swift; path = CustomNibs/FollowerHeader/FollowerHeader.swift; sourceTree = "<group>"; };
 		669042551F55D17600751113 /* FollowerHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FollowerHeader.xib; path = CustomNibs/FollowerHeader/FollowerHeader.xib; sourceTree = "<group>"; };
 		669042581F561F9200751113 /* TwitterRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterRouter.swift; path = Services/NetworkExtensions/TwitterRouter.swift; sourceTree = "<group>"; };
+		6690426C1F56484500751113 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../../../Downloads/Swifter-master/Swifter.xcodeproj"; sourceTree = "<group>"; };
+		669042801F56C97400751113 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtension.swift; path = Extensions/UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		669042821F56CA1300751113 /* Localization.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
+		669042851F56CB2A00751113 /* FollowersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersViewController.swift; path = Views/FollowersViewController.swift; sourceTree = "<group>"; };
+		669042871F56D3F000751113 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		669042891F56E2EC00751113 /* FollowersPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersPage.swift; path = Models/FollowersPage.swift; sourceTree = "<group>"; };
 		66C01B631F54CC4700DB2AF4 /* SimpleTwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C01B661F54CC4700DB2AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C01B6B1F54CC4700DB2AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669042881F56D3F000751113 /* SafariServices.framework in Frameworks */,
+				6690427E1F56486300751113 /* SwifteriOS.framework in Frameworks */,
 				ADCF897E5A56608522B6093B /* Pods_SimpleTwitterClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +156,7 @@
 		4B63261CEEBEF565164F2197 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				669042871F56D3F000751113 /* SafariServices.framework */,
 				38F558FE8FC203D2EA290AA8 /* Pods_SimpleTwitterClient.framework */,
 				1A0EA2B8E4E9E2D90340FE06 /* Pods_SimpleTwitterClient_SimpleTwitterClientTests.framework */,
 			);
@@ -117,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				6690424E1F55C49100751113 /* API.swift */,
-				669042571F561ED300751113 /* NetworkExtensions */,
+				669042571F561ED300751113 /* APIRouters */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -131,17 +181,45 @@
 			name = CustomNibs;
 			sourceTree = "<group>";
 		};
-		669042571F561ED300751113 /* NetworkExtensions */ = {
+		669042571F561ED300751113 /* APIRouters */ = {
 			isa = PBXGroup;
 			children = (
 				669042581F561F9200751113 /* TwitterRouter.swift */,
 			);
-			name = NetworkExtensions;
+			name = APIRouters;
+			sourceTree = "<group>";
+		};
+		6690426D1F56484500751113 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				669042751F56484500751113 /* SwifterDemoiOS.app */,
+				669042771F56484500751113 /* SwifteriOS.framework */,
+				669042791F56484500751113 /* SwifterMac.framework */,
+				6690427B1F56484500751113 /* SwifterDemoMac.app */,
+				6690427D1F56484500751113 /* SwifterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6690427F1F56C8FD00751113 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				669042801F56C97400751113 /* UIAlertControllerExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		669042841F56CAC800751113 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomCells;
 			sourceTree = "<group>";
 		};
 		66C01B5A1F54CC4700DB2AF4 = {
 			isa = PBXGroup;
 			children = (
+				6690426C1F56484500751113 /* Swifter.xcodeproj */,
 				66C01B941F54D54300DB2AF4 /* Default-568h@2x.png */,
 				66C01B651F54CC4700DB2AF4 /* SimpleTwitterClient */,
 				66C01B7A1F54CC4700DB2AF4 /* SimpleTwitterClientTests */,
@@ -170,6 +248,8 @@
 				66C01B971F54DC3F00DB2AF4 /* Models */,
 				6690424D1F55C46900751113 /* Services */,
 				669042521F55D0E200751113 /* CustomNibs */,
+				669042841F56CAC800751113 /* CustomCells */,
+				6690427F1F56C8FD00751113 /* Extensions */,
 				66C01B661F54CC4700DB2AF4 /* AppDelegate.swift */,
 				66C01B6A1F54CC4700DB2AF4 /* Main.storyboard */,
 				66C01B6D1F54CC4700DB2AF4 /* Assets.xcassets */,
@@ -177,6 +257,7 @@
 				66C01B9C1F54DD9400DB2AF4 /* R.generated.swift */,
 				669042501F55CB8800751113 /* Constants.swift */,
 				66C01B721F54CC4700DB2AF4 /* Info.plist */,
+				669042821F56CA1300751113 /* Localization.strings */,
 			);
 			path = SimpleTwitterClient;
 			sourceTree = "<group>";
@@ -203,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				66C01B991F54DCCA00DB2AF4 /* LoginViewController.swift */,
+				669042851F56CB2A00751113 /* FollowersViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -212,6 +294,7 @@
 			children = (
 				669042491F55C44800751113 /* Follower.swift */,
 				6690424B1F55C45F00751113 /* Tweet.swift */,
+				669042891F56E2EC00751113 /* FollowersPage.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -335,6 +418,12 @@
 			mainGroup = 66C01B5A1F54CC4700DB2AF4;
 			productRefGroup = 66C01B641F54CC4700DB2AF4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6690426D1F56484500751113 /* Products */;
+					ProjectRef = 6690426C1F56484500751113 /* Swifter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				66C01B621F54CC4700DB2AF4 /* SimpleTwitterClient */,
@@ -344,12 +433,51 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		669042751F56484500751113 /* SwifterDemoiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = 669042741F56484500751113 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		669042771F56484500751113 /* SwifteriOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = 669042761F56484500751113 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		669042791F56484500751113 /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = 669042781F56484500751113 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6690427B1F56484500751113 /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = 6690427A1F56484500751113 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6690427D1F56484500751113 /* SwifterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterTests.xctest;
+			remoteRef = 6690427C1F56484500751113 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		66C01B611F54CC4700DB2AF4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				669042561F55D17600751113 /* FollowerHeader.xib in Resources */,
+				669042831F56CA1300751113 /* Localization.strings in Resources */,
 				66C01B711F54CC4700DB2AF4 /* LaunchScreen.storyboard in Resources */,
 				66C01B951F54D54300DB2AF4 /* Default-568h@2x.png in Resources */,
 				66C01B6E1F54CC4700DB2AF4 /* Assets.xcassets in Resources */,
@@ -484,6 +612,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669042861F56CB2A00751113 /* FollowersViewController.swift in Sources */,
+				6690428A1F56E2EC00751113 /* FollowersPage.swift in Sources */,
 				669042541F55D15300751113 /* FollowerHeader.swift in Sources */,
 				66C01B9F1F54E05700DB2AF4 /* LoginViewModel.swift in Sources */,
 				6690424A1F55C44800751113 /* Follower.swift in Sources */,
@@ -491,6 +621,7 @@
 				6690424C1F55C45F00751113 /* Tweet.swift in Sources */,
 				66C01B671F54CC4700DB2AF4 /* AppDelegate.swift in Sources */,
 				669042591F561F9200751113 /* TwitterRouter.swift in Sources */,
+				669042811F56C97400751113 /* UIAlertControllerExtension.swift in Sources */,
 				66C01B9D1F54DD9400DB2AF4 /* R.generated.swift in Sources */,
 				6690424F1F55C49100751113 /* API.swift in Sources */,
 				669042511F55CB8800751113 /* Constants.swift in Sources */,

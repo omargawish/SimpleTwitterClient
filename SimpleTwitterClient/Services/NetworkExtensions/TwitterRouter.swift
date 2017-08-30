@@ -45,8 +45,11 @@ enum TwitterRouter {
         
         switch self {
         case .listFollowers(let userId,let cursor):
-            let jsonParameters:Parameters = ["user_id":userId,"cursor":cursor]
-            urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: self.path, parameters: jsonParameters, error: &clientError)
+            let jsonParameters:[String:Any] = ["user_id":userId]
+            if cursor > 0 {
+                urlRequest = try URLEncoding.default.encode(urlRequest, with: ["cursor":cursor])
+            }
+            urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: (urlRequest.url?.absoluteURL.absoluteString)!, parameters: jsonParameters, error: &clientError)
         case .listTweets(let userId):
             let jsonParameters:Parameters = ["user_id":userId]
             urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: self.path, parameters: jsonParameters, error: &clientError)
