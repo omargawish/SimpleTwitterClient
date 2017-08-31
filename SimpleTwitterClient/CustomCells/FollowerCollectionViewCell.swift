@@ -13,4 +13,12 @@ class FollowerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // cut the avatar corners
+        self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.width/2
+        self.avatarImageView.layer.masksToBounds = true
+    }
+    
 }

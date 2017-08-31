@@ -20,11 +20,26 @@ class FollowersViewModel {
     public let loadMoreSignal = Property<Void?>(nil)
     public let refreshSignal = Property<Void?>(nil)
     public let success = Property<Bool?>(nil)
-
+    
     
     
     init() {
         self.getFollowers()
+        
+        // load more
+        self.loadMoreSignal.observeNext {[unowned self] loadMore in
+            if loadMore != nil {
+                self.getFollowers()
+            }
+            }.dispose(in: self.disposeBag)
+        
+        // refresh
+        self.refreshSignal.observeNext {[unowned self] loadMore in
+            if loadMore != nil {
+                self.nextCursor = -1
+                self.getFollowers()
+            }
+            }.dispose(in: self.disposeBag)
     }
     
     func getFollowers() {

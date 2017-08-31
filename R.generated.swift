@@ -147,7 +147,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localization` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localization` struct is generated, and contains static references to 5 localization keys.
     struct localization {
       /// Value: No Internet Connection
       static let noInternetConnection = Rswift.StringResource(key: "No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -157,6 +157,8 @@ struct R: Rswift.Validatable {
       static let simpleTwitterClient = Rswift.StringResource(key: "Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Something went wrong
       static let somethingWentWrong = Rswift.StringResource(key: "Something went wrong", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: User is unauthorized
+      static let userIsUnauthorized = Rswift.StringResource(key: "User is unauthorized", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
       
       /// Value: No Internet Connection
       static func noInternetConnection(_: Void = ()) -> String {
@@ -176,6 +178,11 @@ struct R: Rswift.Validatable {
       /// Value: Something went wrong
       static func somethingWentWrong(_: Void = ()) -> String {
         return NSLocalizedString("Something went wrong", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: User is unauthorized
+      static func userIsUnauthorized(_: Void = ()) -> String {
+        return NSLocalizedString("User is unauthorized", tableName: "Localization", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

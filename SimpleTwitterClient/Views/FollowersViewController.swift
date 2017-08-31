@@ -41,17 +41,23 @@ class FollowersViewController: UIViewController,UICollectionViewDelegateFlowLayo
             }.dispose(in: disposeBag)
         
         self.viewModel.selectedRow.observeNext { [unowned self] row in
-            if let row = row {
-                // self.selectedRow = row
+            if row != nil {
                 self.performSegue(withIdentifier: R.segue.followersViewController.showProfileSegue.identifier, sender: self)
             }
             }.dispose(in: disposeBag)
         
-        // observe/check the followers request success
+        // observe/check the followers list response
         self.viewModel.success.observeNext { success in
             if success != nil {
                 self.refreshControl.endRefreshing()
                 SVProgressHUD.dismiss()
+            }
+        }.dispose(in: self.disposeBag)
+        
+        // show progress animation on loadMore
+        self.viewModel.loadMoreSignal.observeNext { loadMore in
+            if loadMore != nil {
+                SVProgressHUD.show()
             }
         }.dispose(in: self.disposeBag)
 

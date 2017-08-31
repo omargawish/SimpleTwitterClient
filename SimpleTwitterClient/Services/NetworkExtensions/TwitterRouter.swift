@@ -41,7 +41,8 @@ enum TwitterRouter {
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
         var clientError : NSError?
-        let client = TWTRAPIClient()
+        if let userId = Twitter.sharedInstance().sessionStore.session()?.userID {
+        let client = TWTRAPIClient(userID: userId)
         
         switch self {
         case .listFollowers(let userId,let cursor):
@@ -50,12 +51,13 @@ enum TwitterRouter {
                 urlRequest = try URLEncoding.default.encode(urlRequest, with: ["cursor":cursor])
             }
             urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: (urlRequest.url?.absoluteURL.absoluteString)!, parameters: jsonParameters, error: &clientError)
-        case .listTweets(let userId):
-            let jsonParameters:Parameters = ["user_id":userId]
-            urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: self.path, parameters: jsonParameters, error: &clientError)
+        case .listTweets(let followerId):
+            let jsonParameters:Parameters = ["id":followerId,"count":String(10)]
+            //urlRequest = try URLEncoding.default.encode(urlRequest, with: ["user_id":userId])
+            urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: (urlRequest.url?.absoluteURL.absoluteString)!, parameters: jsonParameters, error: &clientError)
         }
         
-        
+        }
         return urlRequest
     }
 }

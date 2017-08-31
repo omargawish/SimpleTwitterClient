@@ -27,9 +27,11 @@ class LoginViewModel {
         if Twitter.sharedInstance().sessionStore.hasLoggedInUsers() {
             self.AlreadyLoggedIn.next(true)
         }
+ 
     }
     
     func loginWithTwitter() {
+        
         Twitter.sharedInstance().logIn(completion: { (session, error) in
             if (session != nil) {
                 self.success.next(true)
@@ -37,6 +39,7 @@ class LoginViewModel {
                 self.success.next(false)
             }
         })
+ 
     }
     
     

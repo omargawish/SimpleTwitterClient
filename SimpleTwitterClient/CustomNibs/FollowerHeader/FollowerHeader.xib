@@ -12,8 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowerHeader" customModule="SimpleTwitterClient" customModuleProvider="target">
             <connections>
-                <outlet property="avatarImageView" destination="KzI-Xv-Udf" id="VcP-FK-Nw4"/>
-                <outlet property="nameLabel" destination="dJ2-rH-OhE" id="RJ2-Te-6Za"/>
+                <outlet property="avatarImageView" destination="KzI-Xv-Udf" id="5lv-Ce-agg"/>
+                <outlet property="headerImageView" destination="rZd-oL-uEe" id="jV9-wQ-M86"/>
+                <outlet property="nameLabel" destination="dJ2-rH-OhE" id="bQ6-UK-yqh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0dq-2W-h6J"/>
             </connections>
         </placeholder>
@@ -26,14 +27,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePricturePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="KzI-Xv-Udf">
-                    <rect key="frame" x="157" y="16" width="60" height="60"/>
+                    <rect key="frame" x="152" y="16" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="KzI-Xv-Udf" secondAttribute="height" id="F6B-0D-MxC"/>
-                        <constraint firstAttribute="width" constant="60" id="JRE-9D-j13"/>
+                        <constraint firstAttribute="width" constant="70" id="JRE-9D-j13"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ2-rH-OhE">
-                    <rect key="frame" x="166" y="84" width="42" height="21"/>
+                    <rect key="frame" x="166" y="94" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
