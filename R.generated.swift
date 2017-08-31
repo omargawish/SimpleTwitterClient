@@ -90,7 +90,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
     /// This struct is generated for `FollowersViewController`, and contains static references to 1 segues.
     struct followersViewController {
@@ -109,14 +109,29 @@ struct R: Rswift.Validatable {
     
     /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
     struct loginViewController {
-      /// Segue identifier `UserFollowersSegue`.
-      static let userFollowersSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "UserFollowersSegue")
+      /// Segue identifier `showUserFollowersSegue`.
+      static let showUserFollowersSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "showUserFollowersSegue")
       
-      /// Optionally returns a typed version of segue `UserFollowersSegue`.
+      /// Optionally returns a typed version of segue `showUserFollowersSegue`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func userFollowersSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LoginViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.loginViewController.userFollowersSegue, segue: segue)
+      static func showUserFollowersSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LoginViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.loginViewController.showUserFollowersSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `ProfileViewController`, and contains static references to 1 segues.
+    struct profileViewController {
+      /// Segue identifier `showImageSegue`.
+      static let showImageSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ProfileViewController, ImageViewerViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showImageSegue")
+      
+      /// Optionally returns a typed version of segue `showImageSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showImageSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ProfileViewController, ImageViewerViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.profileViewController.showImageSegue, segue: segue)
       }
       
       fileprivate init() {}
@@ -145,44 +160,152 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
+    struct launchScreen {
+      fileprivate init() {}
+    }
+    
     /// This `R.string.localization` struct is generated, and contains static references to 5 localization keys.
     struct localization {
-      /// Value: No Internet Connection
-      static let noInternetConnection = Rswift.StringResource(key: "No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Okay
-      static let okay = Rswift.StringResource(key: "Okay", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Simple Twitter Client
-      static let simpleTwitterClient = Rswift.StringResource(key: "Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Something went wrong
-      static let somethingWentWrong = Rswift.StringResource(key: "Something went wrong", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: User is unauthorized
-      static let userIsUnauthorized = Rswift.StringResource(key: "User is unauthorized", tableName: "Localization", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Base translation: No Internet Connection
+      /// 
+      /// Locales: Base, ar
+      static let noInternetConnection = Rswift.StringResource(key: "No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, locales: ["Base", "ar"], comment: nil)
+      /// Base translation: Okay
+      /// 
+      /// Locales: Base, ar
+      static let okay = Rswift.StringResource(key: "Okay", tableName: "Localization", bundle: R.hostingBundle, locales: ["Base", "ar"], comment: nil)
+      /// Base translation: Simple Twitter Client
+      /// 
+      /// Locales: Base, ar
+      static let simpleTwitterClient = Rswift.StringResource(key: "Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, locales: ["Base", "ar"], comment: nil)
+      /// Base translation: Something went wrong
+      /// 
+      /// Locales: Base, ar
+      static let somethingWentWrong = Rswift.StringResource(key: "Something went wrong", tableName: "Localization", bundle: R.hostingBundle, locales: ["Base", "ar"], comment: nil)
+      /// Base translation: User is unauthorized
+      /// 
+      /// Locales: Base, ar
+      static let userIsUnauthorized = Rswift.StringResource(key: "User is unauthorized", tableName: "Localization", bundle: R.hostingBundle, locales: ["Base", "ar"], comment: nil)
       
-      /// Value: No Internet Connection
+      /// Base translation: No Internet Connection
+      /// 
+      /// Locales: Base, ar
       static func noInternetConnection(_: Void = ()) -> String {
-        return NSLocalizedString("No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("No Internet Connection", tableName: "Localization", bundle: R.hostingBundle, value: "No Internet Connection", comment: "")
       }
       
-      /// Value: Okay
+      /// Base translation: Okay
+      /// 
+      /// Locales: Base, ar
       static func okay(_: Void = ()) -> String {
-        return NSLocalizedString("Okay", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("Okay", tableName: "Localization", bundle: R.hostingBundle, value: "Okay", comment: "")
       }
       
-      /// Value: Simple Twitter Client
+      /// Base translation: Simple Twitter Client
+      /// 
+      /// Locales: Base, ar
       static func simpleTwitterClient(_: Void = ()) -> String {
-        return NSLocalizedString("Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("Simple Twitter Client", tableName: "Localization", bundle: R.hostingBundle, value: "Simple Twitter Client", comment: "")
       }
       
-      /// Value: Something went wrong
+      /// Base translation: Something went wrong
+      /// 
+      /// Locales: Base, ar
       static func somethingWentWrong(_: Void = ()) -> String {
-        return NSLocalizedString("Something went wrong", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("Something went wrong", tableName: "Localization", bundle: R.hostingBundle, value: "Something went wrong", comment: "")
       }
       
-      /// Value: User is unauthorized
+      /// Base translation: User is unauthorized
+      /// 
+      /// Locales: Base, ar
       static func userIsUnauthorized(_: Void = ()) -> String {
-        return NSLocalizedString("User is unauthorized", tableName: "Localization", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("User is unauthorized", tableName: "Localization", bundle: R.hostingBundle, value: "User is unauthorized", comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.main` struct is generated, and contains static references to 7 localization keys.
+    struct main {
+      /// ar translation:  
+      /// 
+      /// Locales: ar
+      static let hWkFDG4JText = Rswift.StringResource(key: "hWk-fD-G4J.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation:  
+      /// 
+      /// Locales: ar
+      static let jDPAyMbJText = Rswift.StringResource(key: "jDP-ay-mbJ.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation:  
+      /// 
+      /// Locales: ar
+      static let z8WA9oTitle = Rswift.StringResource(key: "96Z-8W-A9o.title", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation: اسم المستخدم
+      /// 
+      /// Locales: ar
+      static let bGWEMIuyText = Rswift.StringResource(key: "BGW-EM-Iuy.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation: المتابعون
+      /// 
+      /// Locales: ar
+      static let b0dLl99gTitle = Rswift.StringResource(key: "B0d-Ll-99g.title", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation: تسجيل الدخول لتويتر
+      /// 
+      /// Locales: ar
+      static let v3rGmC2gNormalTitle = Rswift.StringResource(key: "V3r-gm-c2g.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation: متابع
+      /// 
+      /// Locales: ar
+      static let iig5hYHBTitle = Rswift.StringResource(key: "iig-5h-yHB.title", tableName: "Main", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      
+      /// ar translation:  
+      /// 
+      /// Locales: ar
+      static func hWkFDG4JText(_: Void = ()) -> String {
+        return NSLocalizedString("hWk-fD-G4J.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation:  
+      /// 
+      /// Locales: ar
+      static func jDPAyMbJText(_: Void = ()) -> String {
+        return NSLocalizedString("jDP-ay-mbJ.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation:  
+      /// 
+      /// Locales: ar
+      static func z8WA9oTitle(_: Void = ()) -> String {
+        return NSLocalizedString("96Z-8W-A9o.title", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation: اسم المستخدم
+      /// 
+      /// Locales: ar
+      static func bGWEMIuyText(_: Void = ()) -> String {
+        return NSLocalizedString("BGW-EM-Iuy.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation: المتابعون
+      /// 
+      /// Locales: ar
+      static func b0dLl99gTitle(_: Void = ()) -> String {
+        return NSLocalizedString("B0d-Ll-99g.title", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation: تسجيل الدخول لتويتر
+      /// 
+      /// Locales: ar
+      static func v3rGmC2gNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("V3r-gm-c2g.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation: متابع
+      /// 
+      /// Locales: ar
+      static func iig5hYHBTitle(_: Void = ()) -> String {
+        return NSLocalizedString("iig-5h-yHB.title", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

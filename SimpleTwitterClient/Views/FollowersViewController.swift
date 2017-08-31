@@ -46,7 +46,7 @@ class FollowersViewController: UIViewController,UICollectionViewDelegateFlowLayo
             }
             }.dispose(in: disposeBag)
         
-        // observe/check the followers list response
+        // did get followers list successfully
         self.viewModel.success.observeNext { success in
             if success != nil {
                 self.refreshControl.endRefreshing()
@@ -70,17 +70,9 @@ class FollowersViewController: UIViewController,UICollectionViewDelegateFlowLayo
     }
     
     // MARK: - Collection view delegate
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cellsAcross: CGFloat = 2
-//        var widthRemainingForCellContent = collectionView.bounds.width
-//        if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout {
-//            let borderSize: CGFloat = flowLayout.sectionInset.left + flowLayout.sectionInset.right
-//            widthRemainingForCellContent -= borderSize + ((cellsAcross - 1) * flowLayout.minimumInteritemSpacing)
-//        }
-//        let cellWidth = (widthRemainingForCellContent / cellsAcross)
-//
-//        return CGSize(width: cellWidth, height: 0)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 240, height: 240)
+    }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.item == self.viewModel.followers.count - 1 {

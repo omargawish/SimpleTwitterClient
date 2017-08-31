@@ -1,0 +1,21 @@
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "96Z-8W-A9o"; */
+"96Z-8W-A9o.title" = " ";
+
+/* Class = "UINavigationItem"; title = "User Followers"; ObjectID = "B0d-Ll-99g"; */
+"B0d-Ll-99g.title" = "المتابعون";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "BGW-EM-Iuy"; */
+"BGW-EM-Iuy.text" = "اسم المستخدم";
+
+/* Class = "UIButton"; normalTitle = "Login to Twitter"; ObjectID = "V3r-gm-c2g"; */
+"V3r-gm-c2g.normalTitle" = "تسجيل الدخول لتويتر";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hWk-fD-G4J"; */
+"hWk-fD-G4J.text" = " ";
+
+/* Class = "UIViewController"; title = "Follower"; ObjectID = "iig-5h-yHB"; */
+"iig-5h-yHB.title" = "متابع";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jDP-ay-mbJ"; */
+"jDP-ay-mbJ.text" = " ";

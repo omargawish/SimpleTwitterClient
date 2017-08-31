@@ -21,8 +21,6 @@ class FollowersViewModel {
     public let refreshSignal = Property<Void?>(nil)
     public let success = Property<Bool?>(nil)
     
-    
-    
     init() {
         self.getFollowers()
         
@@ -40,6 +38,7 @@ class FollowersViewModel {
                 self.getFollowers()
             }
             }.dispose(in: self.disposeBag)
+        
     }
     
     func getFollowers() {

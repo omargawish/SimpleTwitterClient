@@ -15,7 +15,6 @@
 		669042561F55D17600751113 /* FollowerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669042551F55D17600751113 /* FollowerHeader.xib */; };
 		669042591F561F9200751113 /* TwitterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042581F561F9200751113 /* TwitterRouter.swift */; };
 		669042811F56C97400751113 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042801F56C97400751113 /* UIAlertControllerExtension.swift */; };
-		669042831F56CA1300751113 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 669042821F56CA1300751113 /* Localization.strings */; };
 		669042861F56CB2A00751113 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042851F56CB2A00751113 /* FollowersViewController.swift */; };
 		669042881F56D3F000751113 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669042871F56D3F000751113 /* SafariServices.framework */; };
 		6690428A1F56E2EC00751113 /* FollowersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042891F56E2EC00751113 /* FollowersPage.swift */; };
@@ -24,6 +23,9 @@
 		669042901F56F75C00751113 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690428F1F56F75C00751113 /* ProfileViewController.swift */; };
 		669042921F57A71200751113 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042911F57A71200751113 /* FollowerCollectionViewCell.swift */; };
 		669042941F57A79600751113 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042931F57A79600751113 /* TweetTableViewCell.swift */; };
+		669042961F588A4200751113 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042951F588A4200751113 /* ImageViewerViewController.swift */; };
+		669042981F588A6700751113 /* ImageViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669042971F588A6700751113 /* ImageViewerViewModel.swift */; };
+		6690429B1F58965F00751113 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6690429D1F58965F00751113 /* Localization.strings */; };
 		66C01B671F54CC4700DB2AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C01B661F54CC4700DB2AF4 /* AppDelegate.swift */; };
 		66C01B6C1F54CC4700DB2AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C01B6A1F54CC4700DB2AF4 /* Main.storyboard */; };
 		66C01B6E1F54CC4700DB2AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C01B6D1F54CC4700DB2AF4 /* Assets.xcassets */; };
@@ -68,7 +70,6 @@
 		669042551F55D17600751113 /* FollowerHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FollowerHeader.xib; path = CustomNibs/FollowerHeader/FollowerHeader.xib; sourceTree = "<group>"; };
 		669042581F561F9200751113 /* TwitterRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterRouter.swift; path = Services/NetworkExtensions/TwitterRouter.swift; sourceTree = "<group>"; };
 		669042801F56C97400751113 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtension.swift; path = Extensions/UIAlertControllerExtension.swift; sourceTree = "<group>"; };
-		669042821F56CA1300751113 /* Localization.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		669042851F56CB2A00751113 /* FollowersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersViewController.swift; path = Views/FollowersViewController.swift; sourceTree = "<group>"; };
 		669042871F56D3F000751113 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		669042891F56E2EC00751113 /* FollowersPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersPage.swift; path = Models/FollowersPage.swift; sourceTree = "<group>"; };
@@ -77,6 +78,12 @@
 		6690428F1F56F75C00751113 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Views/ProfileViewController.swift; sourceTree = "<group>"; };
 		669042911F57A71200751113 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowerCollectionViewCell.swift; path = CustomCells/FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
 		669042931F57A79600751113 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetTableViewCell.swift; path = CustomCells/TweetTableViewCell.swift; sourceTree = "<group>"; };
+		669042951F588A4200751113 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewerViewController.swift; path = Views/ImageViewerViewController.swift; sourceTree = "<group>"; };
+		669042971F588A6700751113 /* ImageViewerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewerViewModel.swift; path = ViewModels/ImageViewerViewModel.swift; sourceTree = "<group>"; };
+		669042991F58961000751113 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		6690429A1F58961000751113 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6690429C1F58965F00751113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localization.strings; sourceTree = "<group>"; };
+		6690429E1F58966200751113 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localization.strings; sourceTree = "<group>"; };
 		66C01B631F54CC4700DB2AF4 /* SimpleTwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C01B661F54CC4700DB2AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C01B6B1F54CC4700DB2AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,8 +154,7 @@
 		669042521F55D0E200751113 /* CustomNibs */ = {
 			isa = PBXGroup;
 			children = (
-				669042531F55D15300751113 /* FollowerHeader.swift */,
-				669042551F55D17600751113 /* FollowerHeader.xib */,
+				6690429F1F5897C600751113 /* FollowerHeader */,
 			);
 			name = CustomNibs;
 			sourceTree = "<group>";
@@ -176,6 +182,15 @@
 				669042931F57A79600751113 /* TweetTableViewCell.swift */,
 			);
 			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		6690429F1F5897C600751113 /* FollowerHeader */ = {
+			isa = PBXGroup;
+			children = (
+				669042531F55D15300751113 /* FollowerHeader.swift */,
+				669042551F55D17600751113 /* FollowerHeader.xib */,
+			);
+			name = FollowerHeader;
 			sourceTree = "<group>";
 		};
 		66C01B5A1F54CC4700DB2AF4 = {
@@ -218,7 +233,7 @@
 				66C01B9C1F54DD9400DB2AF4 /* R.generated.swift */,
 				669042501F55CB8800751113 /* Constants.swift */,
 				66C01B721F54CC4700DB2AF4 /* Info.plist */,
-				669042821F56CA1300751113 /* Localization.strings */,
+				6690429D1F58965F00751113 /* Localization.strings */,
 			);
 			path = SimpleTwitterClient;
 			sourceTree = "<group>";
@@ -247,6 +262,7 @@
 				66C01B991F54DCCA00DB2AF4 /* LoginViewController.swift */,
 				669042851F56CB2A00751113 /* FollowersViewController.swift */,
 				6690428F1F56F75C00751113 /* ProfileViewController.swift */,
+				669042951F588A4200751113 /* ImageViewerViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -267,6 +283,7 @@
 				66C01B9E1F54E05700DB2AF4 /* LoginViewModel.swift */,
 				6690428B1F56F65700751113 /* FollowersViewModel.swift */,
 				6690428D1F56F73A00751113 /* ProfileViewModel.swift */,
+				669042971F588A6700751113 /* ImageViewerViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -378,6 +395,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 66C01B5A1F54CC4700DB2AF4;
 			productRefGroup = 66C01B641F54CC4700DB2AF4 /* Products */;
@@ -397,7 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				669042561F55D17600751113 /* FollowerHeader.xib in Resources */,
-				669042831F56CA1300751113 /* Localization.strings in Resources */,
+				6690429B1F58965F00751113 /* Localization.strings in Resources */,
 				66C01B711F54CC4700DB2AF4 /* LaunchScreen.storyboard in Resources */,
 				66C01B951F54D54300DB2AF4 /* Default-568h@2x.png in Resources */,
 				66C01B6E1F54CC4700DB2AF4 /* Assets.xcassets in Resources */,
@@ -532,7 +550,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669042961F588A4200751113 /* ImageViewerViewController.swift in Sources */,
 				669042861F56CB2A00751113 /* FollowersViewController.swift in Sources */,
+				669042981F588A6700751113 /* ImageViewerViewModel.swift in Sources */,
 				6690428A1F56E2EC00751113 /* FollowersPage.swift in Sources */,
 				669042541F55D15300751113 /* FollowerHeader.swift in Sources */,
 				66C01B9F1F54E05700DB2AF4 /* LoginViewModel.swift in Sources */,
@@ -585,10 +605,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6690429D1F58965F00751113 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6690429C1F58965F00751113 /* Base */,
+				6690429E1F58966200751113 /* ar */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
 		66C01B6A1F54CC4700DB2AF4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				66C01B6B1F54CC4700DB2AF4 /* Base */,
+				669042991F58961000751113 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -597,6 +627,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				66C01B701F54CC4700DB2AF4 /* Base */,
+				6690429A1F58961000751113 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -608,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -658,6 +690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

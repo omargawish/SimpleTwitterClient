@@ -50,7 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="V3r-gm-c2g" id="fsg-Uy-0Dn"/>
-                        <segue destination="Tgp-yL-0aD" kind="show" identifier="UserFollowersSegue" id="ayv-IT-N3L"/>
+                        <segue destination="Tgp-yL-0aD" kind="show" identifier="showUserFollowersSegue" id="ayv-IT-N3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -204,17 +204,17 @@
                     </view>
                     <connections>
                         <outlet property="tweetsTableView" destination="3If-Uz-FxM" id="kMP-lm-GY7"/>
-                        <segue destination="mV8-rX-Txt" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="lx4-o4-bc1"/>
+                        <segue destination="mV8-rX-Txt" kind="presentation" identifier="showImageSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="lx4-o4-bc1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39o-2U-1Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2309.5999999999999" y="103.89805097451276"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Viewer View Controller-->
         <scene sceneID="wQ2-Ev-jKm">
             <objects>
-                <viewController id="mV8-rX-Txt" sceneMemberID="viewController">
+                <viewController id="mV8-rX-Txt" customClass="ImageViewerViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FL8-vF-ijS"/>
                         <viewControllerLayoutGuide type="bottom" id="47j-vt-ni3"/>
@@ -223,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-wN-QK2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-wN-QK2">
                                 <rect key="frame" x="16" y="233.5" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="N7m-cz-w1j"/>
@@ -237,6 +237,9 @@
                             <constraint firstItem="bf0-wN-QK2" firstAttribute="centerY" secondItem="L0m-sj-b4P" secondAttribute="centerY" id="jFe-1p-QVv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="bf0-wN-QK2" id="Mde-wi-8HT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANo-QL-7St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

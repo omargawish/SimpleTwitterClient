@@ -37,8 +37,7 @@ class API {
     
     public func requestJSON(request:URLRequest, completionHandler:@escaping callback) {
         if let userid = Twitter.sharedInstance().sessionStore.session()?.userID {
-            // let client = TWTRAPIClient(userID: userid)
-            let client = TWTRAPIClient.withCurrentUser()
+            let client = TWTRAPIClient(userID: userid)
             
             client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
                 if connectionError != nil {

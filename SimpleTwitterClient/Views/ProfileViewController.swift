@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
             }.dispose(in: disposeBag)
         
         
-        // observe/check the followers request success
+        // did get last tweets successfully
         self.viewModel.success.observeNext { success in
             if success != nil {
                 SVProgressHUD.dismiss()
@@ -50,29 +50,42 @@ class ProfileViewController: UIViewController {
     }
     
     func setUpTheStikyHeader() {
-        let header = FollowerHeader(frame: CGRect(x: 0, y: 0, width: self.tweetsTableView.frame.width, height: 200))
+        let header = FollowerHeader(frame: CGRect(x: 0, y: 0, width: self.tweetsTableView.frame.width, height: 150))
+        header.avatarImageView.isUserInteractionEnabled = true
+        header.avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapOnAvatar)))
         if let follower = self.viewModel.follower.value {
             header.setFollower(follower)
             header.contentMode = .scaleAspectFill
             
             self.tweetsTableView.parallaxHeader.view = header
-            self.tweetsTableView.parallaxHeader.height = 200
+            self.tweetsTableView.parallaxHeader.height = 150
             self.tweetsTableView.parallaxHeader.mode = .fill
             self.tweetsTableView.parallaxHeader.minimumHeight = 20
         }
         
     }
     
+    // MARK: - Tap Gesture Recognizer
+    func tapOnAvatar() {
+        self.performSegue(withIdentifier: R.segue.profileViewController.showImageSegue.identifier, sender: self)
+    }
     
-    /*
+    
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == R.segue.profileViewController.showImageSegue.identifier {
+            if let vc = segue.destination as? ImageViewerViewController
+            , let imageUrl = self.viewModel.follower.value?.avatar {
+                vc.viewModel = ImageViewerViewModel(imageUrl: imageUrl)
+            }
+        }
+    }
+    
     
     deinit {
         self.disposeBag.dispose()

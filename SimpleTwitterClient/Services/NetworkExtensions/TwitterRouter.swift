@@ -52,8 +52,7 @@ enum TwitterRouter {
             }
             urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: (urlRequest.url?.absoluteURL.absoluteString)!, parameters: jsonParameters, error: &clientError)
         case .listTweets(let followerId):
-            let jsonParameters:Parameters = ["id":followerId,"count":String(10)]
-            //urlRequest = try URLEncoding.default.encode(urlRequest, with: ["user_id":userId])
+            let jsonParameters:Parameters = ["user_id":followerId,"count":String(10)]
             urlRequest = client.urlRequest(withMethod: self.method.rawValue, url: (urlRequest.url?.absoluteURL.absoluteString)!, parameters: jsonParameters, error: &clientError)
         }
         

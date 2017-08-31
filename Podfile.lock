@@ -1,0 +1,73 @@
+PODS:
+  - Alamofire (4.5.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - Bond (6.2.8):
+    - Diff (~> 0.4)
+    - ReactiveKit (~> 3.5.3)
+  - Diff (0.5.3)
+  - DZNEmptyDataSet (1.8.1)
+  - Hero (0.3.6)
+  - IQKeyboardManagerSwift (4.0.11)
+  - MXParallaxHeader (0.6.1)
+  - ObjectMapper (2.2.8)
+  - ObjectMapper+Realm (0.3):
+    - ObjectMapper
+    - RealmSwift
+  - R.swift (3.3.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - ReactiveKit (3.5.5)
+  - Realm (2.9.1):
+    - Realm/Headers (= 2.9.1)
+  - Realm/Headers (2.9.1)
+  - RealmSwift (2.9.1):
+    - Realm (= 2.9.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SVProgressHUD (2.1.2)
+  - TwitterCore (3.0.0)
+  - TwitterKit (3.0.4):
+    - TwitterCore (>= 3.0.0)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper (~> 4.0)
+  - Bond
+  - DZNEmptyDataSet
+  - Hero
+  - IQKeyboardManagerSwift
+  - MXParallaxHeader
+  - ObjectMapper+Realm
+  - R.swift
+  - ReactiveKit (~> 3.2)
+  - RealmSwift
+  - SDWebImage (~> 3.8)
+  - SVProgressHUD
+  - TwitterKit
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  Bond: bd11b6f3dc526ab9beb1e5a1369872628b33fd36
+  Diff: befa1d19c32726b2b36ce915d98793e2fbde8dcc
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
+  IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
+  MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
+  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  ReactiveKit: ced30f9647912f74510bd8179790cf2dfc9454c8
+  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
+  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TwitterCore: 8ce250be1eb34633a0e6acc89520d4165ec52c10
+  TwitterKit: 5064d99632a8d6e5f1364e6e8f7b211d196c0840
+
+PODFILE CHECKSUM: 1a46454d5430288acd93b884a5177ad289272469
+
+COCOAPODS: 1.0.1

@@ -34,6 +34,14 @@ class Follower: Object,Mappable {
         avatar <- map["profile_image_url_https"]
         bio <- map["description"]
     }
+    
+    // MARK:- CRUD
+    func save() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(self, update: true)
+        }
+    }
 }
 
 
@@ -46,6 +54,10 @@ extension API {
                 case .sucess(let object):
                     if let object = object as? [String:Any]{
                         if let followersPage = FollowersPage(JSON: object) {
+                            // cache result in database for offline mode
+                            for follower in followersPage.followers {
+                                follower.save()
+                            }
                             completaionHandler(.sucess(object: followersPage))
                         }
                     }
