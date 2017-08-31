@@ -37,11 +37,6 @@ class API {
     
     public func requestJSON(request:URLRequest, completionHandler:@escaping callback) {
         let client = TWTRAPIClient()
-//        let statusesShowEndpoint = "https://api.twitter.com/1.1/statuses/show.json"
-//        let params = ["id": "20"]
-//        var clientError : NSError?
-        
-//        let request = client.urlRequest(withMethod: "GET", url: statusesShowEndpoint, parameters: params, error: &clientError)
         
         client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
             if connectionError != nil {

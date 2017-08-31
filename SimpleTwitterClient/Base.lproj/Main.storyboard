@@ -79,28 +79,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kS9-DA-kDb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FollowerCollectionViewCell" id="kS9-DA-kDb" customClass="FollowerCollectionViewCell" customModule="SimpleTwitterClient" customModuleProvider="target">
+                                        <rect key="frame" x="67.5" y="0.0" width="240" height="143"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="143"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-91-zl0">
-                                                    <rect key="frame" x="157.5" y="8" width="60" height="60"/>
+                                                    <rect key="frame" x="130" y="8" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Rye-91-zl0" secondAttribute="height" id="7GB-8v-n6T"/>
                                                         <constraint firstAttribute="width" constant="60" id="cyM-hA-gA4"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGW-EM-Iuy">
-                                                    <rect key="frame" x="148" y="76" width="79" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGW-EM-Iuy">
+                                                    <rect key="frame" x="120.5" y="76" width="79" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWk-fD-G4J">
-                                                    <rect key="frame" x="166" y="105" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWk-fD-G4J">
+                                                    <rect key="frame" x="16" y="105" width="288" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -108,15 +108,21 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="hWk-fD-G4J" secondAttribute="bottom" constant="8" id="0qP-eI-e8o"/>
+                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="hWk-fD-G4J" secondAttribute="bottom" constant="8" id="0qP-eI-e8o"/>
                                             <constraint firstItem="Rye-91-zl0" firstAttribute="centerX" secondItem="kS9-DA-kDb" secondAttribute="centerX" id="15S-Aw-NwK"/>
                                             <constraint firstItem="BGW-EM-Iuy" firstAttribute="centerX" secondItem="kS9-DA-kDb" secondAttribute="centerX" id="8n6-hd-4zv"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="hWk-fD-G4J" secondAttribute="trailing" constant="8" id="9RS-eb-gfy"/>
                                             <constraint firstItem="Rye-91-zl0" firstAttribute="top" secondItem="kS9-DA-kDb" secondAttribute="top" constant="8" id="9dq-uK-bx6"/>
-                                            <constraint firstItem="hWk-fD-G4J" firstAttribute="centerX" secondItem="kS9-DA-kDb" secondAttribute="centerX" id="U4b-mE-gpX"/>
                                             <constraint firstItem="BGW-EM-Iuy" firstAttribute="top" secondItem="Rye-91-zl0" secondAttribute="bottom" constant="8" id="VJg-2e-iPn"/>
                                             <constraint firstItem="hWk-fD-G4J" firstAttribute="top" secondItem="BGW-EM-Iuy" secondAttribute="bottom" constant="8" id="iyU-8B-r9G"/>
+                                            <constraint firstItem="hWk-fD-G4J" firstAttribute="leading" secondItem="kS9-DA-kDb" secondAttribute="leadingMargin" constant="8" id="tjz-mQ-h5m"/>
                                         </constraints>
-                                        <size key="customSize" width="375" height="143"/>
+                                        <size key="customSize" width="240" height="143"/>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="Rye-91-zl0" id="3Hg-8b-js0"/>
+                                            <outlet property="bioLabel" destination="hWk-fD-G4J" id="mBx-Bk-DkE"/>
+                                            <outlet property="userNameLabel" destination="BGW-EM-Iuy" id="Cfl-kT-YDU"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -129,11 +135,10 @@
                             <constraint firstItem="kDH-Ru-IWP" firstAttribute="leading" secondItem="lob-12-TSh" secondAttribute="leading" id="KYl-Yu-R1C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="User Followers" id="B0d-Ll-99g">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="MHE-yp-6yy"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="User Followers" id="B0d-Ll-99g"/>
                     <connections>
-                        <segue destination="iig-5h-yHB" kind="show" id="eNj-cd-Khk"/>
+                        <outlet property="collectionView" destination="kDH-Ru-IWP" id="5Lj-rN-RAL"/>
+                        <segue destination="iig-5h-yHB" kind="show" identifier="showProfileSegue" id="eNj-cd-Khk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBO-al-OeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,7 +148,7 @@
         <!--Follower-->
         <scene sceneID="4RU-e6-ZRS">
             <objects>
-                <viewController title="Follower" id="iig-5h-yHB" sceneMemberID="viewController">
+                <viewController title="Follower" id="iig-5h-yHB" customClass="ProfileViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DmL-ya-DZa"/>
                         <viewControllerLayoutGuide type="bottom" id="41F-23-bY1"/>
@@ -156,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="bwY-c3-XzZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetTableViewCell" rowHeight="90" id="bwY-c3-XzZ" customClass="TweetTableViewCell" customModule="SimpleTwitterClient" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bwY-c3-XzZ" id="6aC-pd-YJx">
@@ -177,6 +182,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="jDP-ay-mbJ" secondAttribute="bottom" constant="8" id="fKD-FJ-HeC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tweetTextLabel" destination="jDP-ay-mbJ" id="Sqv-Ze-ij8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -202,9 +210,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="bX6-gN-57j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.97067139148712156" green="0.97067139148712156" blue="0.97067139148712156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.15686274510000001" green="0.56078431370000004" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.97067139150000004" green="0.97067139150000004" blue="0.97067139150000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -217,5 +225,5 @@
             <point key="canvasLocation" x="816.79999999999995" y="103.89805097451276"/>
         </scene>
     </scenes>
-    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" red="0.97067139150000004" green="0.97067139150000004" blue="0.97067139150000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

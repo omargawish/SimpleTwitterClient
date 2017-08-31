@@ -9,13 +9,16 @@
 import UIKit
 
 class FollowerHeader: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    @IBOutlet var view: UIView!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.view = Bundle.main.loadNibNamed(R.nib.followerHeader.name, owner: self, options: nil)?.first as! UIView
+        self.addSubview(view)
+        
     }
-    */
-
 }

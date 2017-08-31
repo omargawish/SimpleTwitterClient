@@ -80,13 +80,33 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `FollowerCollectionViewCell`.
+    static let followerCollectionViewCell: Rswift.ReuseIdentifier<FollowerCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "FollowerCollectionViewCell")
+    /// Reuse identifier `TweetTableViewCell`.
+    static let tweetTableViewCell: Rswift.ReuseIdentifier<TweetTableViewCell> = Rswift.ReuseIdentifier(identifier: "TweetTableViewCell")
+    
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
+    /// This struct is generated for `FollowersViewController`, and contains static references to 1 segues.
+    struct followersViewController {
+      /// Segue identifier `showProfileSegue`.
+      static let showProfileSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, FollowersViewController, ProfileViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showProfileSegue")
+      
+      /// Optionally returns a typed version of segue `showProfileSegue`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showProfileSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, FollowersViewController, ProfileViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.followersViewController.showProfileSegue, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
     struct loginViewController {
       /// Segue identifier `UserFollowersSegue`.
@@ -196,6 +216,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "ProfilePricturePlaceholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ProfilePricturePlaceholder' is used in nib 'FollowerHeader', but couldn't be loaded.") }
         if UIKit.UIImage(named: "HeaderPlaceholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'HeaderPlaceholder' is used in nib 'FollowerHeader', but couldn't be loaded.") }
       }
       
