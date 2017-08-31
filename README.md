@@ -1,5 +1,10 @@
 # Simple Twitter Client
 
+Please install the Pods before you build it:
+```
+Pod install 
+```
+
 ### Design
 I have used *MVVM* as an architecture to have short view controllers ,readable and testable code and i have used *Reactivekit* and *Bond* to help with bindings.
 
